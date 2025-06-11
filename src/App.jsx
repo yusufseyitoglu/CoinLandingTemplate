@@ -51,7 +51,8 @@ function App() {
         backgroundRepeat: 'no-repeat',
         width: '100vw',
         height: '100vh',
-        position: 'relative'
+        position: 'relative',
+        zIndex: 1
       }}>
         <div style={{
           width: '100%',
@@ -159,7 +160,8 @@ Neden Trump ve Elon?
         backgroundColor: '#000000',
         width: '100vw',
         height: '100vh',
-        position: 'relative'
+        position: 'relative',
+        zIndex: 2
       }}>
         <div style={{
           width: '100%',
