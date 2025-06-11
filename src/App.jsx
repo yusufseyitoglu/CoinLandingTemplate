@@ -166,7 +166,9 @@ Neden Trump ve Elon?
           height: '100%',
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          overflowY: 'auto',
+          padding: '40px 0'
         }}>
           <div style={{
             color: '#ffffff',
@@ -211,6 +213,83 @@ Neden Trump ve Elon?
               maxWidth: '800px'
             }}>İki dünya devi, bir coin'de buluşuyor. 
             Kripto dünyasının en renkli karakterleri artık bir projede karşı karşıya!</p>
+
+            {/* Roadmap Section */}
+            <div style={{ width: '100%', marginTop: '30px' }}>
+              <h2 style={{
+                fontSize: isMobile ? '24px' : '32px',
+                marginBottom: '30px',
+                fontFamily: 'Fredoka One, cursive',
+                color: '#ffffff',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+                letterSpacing: '2px'
+              }}>🗺️ Yol Haritası</h2>
+
+              {[
+                {
+                  quarter: 'Q2 2025',
+                  items: [
+                    { emoji: '✅', text: 'Web Sitesi Yayında' },
+                    { emoji: '✅', text: 'Topluluk Airdrop\'u' },
+                    { emoji: '✅', text: 'İlk borsa listelemesi' }
+                  ]
+                },
+                {
+                  quarter: 'Q3 2025',
+                  items: [
+                    { emoji: '🚀', text: 'NFT Koleksiyonu' },
+                    { emoji: '🕹️', text: 'Trump vs Elon Game Beta' },
+                    { emoji: '💬', text: 'Influencer iş birlikleri' }
+                  ]
+                },
+                {
+                  quarter: 'Q4 2025',
+                  items: [
+                    { emoji: '🏛', text: 'DAO Oluşturulması' },
+                    { emoji: '🌎', text: 'Gerçek dünya etkinliği' },
+                    { emoji: '📈', text: 'CEX borsalarda listelenme' }
+                  ]
+                }
+              ].map((quarter, index) => (
+                <div key={index} style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: '12px',
+                  padding: '20px 30px',
+                  marginBottom: '20px',
+                  maxWidth: isMobile ? '100%' : '600px',
+                  margin: '0 auto 20px auto',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                }}>
+                  <div style={{
+                    fontSize: '20px',
+                    fontWeight: 'bold',
+                    marginBottom: '15px',
+                    color: '#ffffff',
+                    textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
+                  }}>{quarter.quarter}</div>
+                  <ul style={{
+                    listStyle: 'none',
+                    padding: 0,
+                    margin: 0,
+                    textAlign: 'left'
+                  }}>
+                    {quarter.items.map((item, itemIndex) => (
+                      <li key={itemIndex} style={{
+                        marginBottom: '12px',
+                        fontSize: '16px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        color: '#ffffff'
+                      }}>
+                        <span style={{ marginRight: '10px', fontSize: '18px' }}>{item.emoji}</span>
+                        {item.text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
